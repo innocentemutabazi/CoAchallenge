@@ -7,7 +7,7 @@ This project is an interactive photo gallery created as part of a coding challen
 ## Project Structure
 
 The project is structured as follows:
-
+```bash 
 CoAchallenge/
 │
 ├── Image Gallery/
@@ -16,8 +16,7 @@ CoAchallenge/
 │ │ ├── fox.png
 │ │ ├── whale.png
 │ │ ├── baboon.png
-│ │ ├── image.png
-│ │ └── ... (other images)
+│ │ └── image.png
 │ │
 │ ├── index.html
 │ ├── gallery.css
@@ -28,7 +27,7 @@ CoAchallenge/
 │ └── stringTransform.js
 │
 └── README.md
-
+```
 
 ## Image Gallery Features
 
@@ -42,7 +41,7 @@ CoAchallenge/
 
 1. **Clone the repository**:
     ```bash
-    git clone <repository-url>
+    git clone <https://github.com/innocentemutabazi/CoAchallenge.git>
     ```
 
 2. **Navigate to the src folder**:
@@ -75,7 +74,7 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
 
 ## Acknowledgements
 
-- Font: -   [Google Fonts - Poppins](https://fonts.google.com/specimen/Poppins)
+- Font: -   [Google Fonts - Poppins](https://fonts.google.com/specimen/Poppins)<br>
         -   [Online WebFonts - DIN Condensed](https://www.onlinewebfonts.com/download/954a505bdd1fd46577f8b93badf61c8c)
 
 For any questions or feedback, please contact [innocentemuatabazi@gmail.com].
