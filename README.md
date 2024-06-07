@@ -77,4 +77,4 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
 - Font: -   [Google Fonts - Poppins](https://fonts.google.com/specimen/Poppins)<br>
         -   [Online WebFonts - DIN Condensed](https://www.onlinewebfonts.com/download/954a505bdd1fd46577f8b93badf61c8c)
 
-For any questions or feedback, please contact [innocentemuatabazi@gmail.com].
+For any questions or feedback, please contact [innocentemutabazi@gmail.com].
