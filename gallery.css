@@ -76,7 +76,6 @@ img {
 .info {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: flex-start;
     gap: 8px;
     transition: transform 0.3s ease-out;
@@ -89,7 +88,6 @@ img {
 }
 
 .subject-name {
-    width: 100%;
     font-weight: 700;
     font-size: 30px;
     line-height: 1.15;
