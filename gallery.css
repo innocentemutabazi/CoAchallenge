@@ -38,8 +38,6 @@ body {
 .image-interaction {
     flex: 1;
     position: relative;
-    filter: grayscale(0) blur(0);
-    transform: scale(1);
     overflow: hidden;
     cursor: pointer;
     transition: .5s ease-in-out;
@@ -47,7 +45,7 @@ body {
 
 .image-interaction:hover img {
     filter: grayscale(100%) blur(3px) brightness(50%);
-    transform: scale(1.1);
+    transform: scale(1.2);
 
 }
 
@@ -81,8 +79,6 @@ img {
     justify-content: flex-end;
     align-items: flex-start;
     gap: 8px;
-    width: 213px;
-    height: 176px;
     transition: transform 0.3s ease-out;
 
 }
@@ -98,16 +94,14 @@ img {
     font-size: 30px;
     line-height: 1.15;
     text-transform: uppercase;
-    font-family: "DIN Condensed";
+    font-family: 'DIN Condensed';
 
 
-    height: 76px;
 
 
 }
 
 .location {
-    width: 213px;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.33;
