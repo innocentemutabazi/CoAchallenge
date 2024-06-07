@@ -11,7 +11,6 @@ The project is structured as follows:
 CoAchallenge/
 │
 ├── Image Gallery/
-│ └── src/
 │ ├── images/
 │ │ ├── fox.png
 │ │ ├── whale.png
@@ -46,11 +45,11 @@ CoAchallenge/
 
 2. **Navigate to the src folder**:
     ```bash
-    cd CoAchallenge/Image\ Gallery/src
+    cd CoAchallenge/Image\ Gallery
     ```
 
 3. **Open the HTML file**:
-    - **Using File Explorer**: Navigate to the `CoAchallenge/Image Gallery/src` directory and double-click on `index.html` to open it in your default web browser.
+    - **Using File Explorer**: Navigate to the `CoAchallenge/Image Gallery` directory and double-click on `index.html` to open it in your default web browser.
     - **Using Right-click**: Right-click on `index.html` and select "Open with" to choose a specific web browser.
     - **Using Browser**: Open your web browser and drag the `index.html` file into the browser window.
     - **Using Command Line**:
