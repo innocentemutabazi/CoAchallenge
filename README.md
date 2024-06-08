@@ -1,8 +1,21 @@
+
 # CoAchallenge
 
 ## Project Overview
 
-This project is an interactive photo gallery created as part of a coding challenge to assess skills in HTML, CSS, and JavaScript. The gallery adapts seamlessly to different screen sizes, matches provided Figma designs, and includes hover interactions to display additional details about each photo. Additionally, the project includes two JavaScript coding challenges.
+This project is an interactive photo gallery created as part of a coding challenge to assess skills in HTML, CSS, and JavaScript. The gallery adapts seamlessly to different screen sizes, matches provided Figma designs, and includes hover interactions to display additional details about each photo. Additionally, the project includes solutions to two JavaScript coding challenges.
+
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Project Structure](#project-structure)
+- [Image Gallery Features](#image-gallery-features)
+- [How to Run the Gallery Locally](#how-to-run-the-gallery-locally)
+- [How to Run the Coding Challenges](#how-to-run-the-coding-challenges)
+  - [Array Manipulation](#array-manipulation)
+  - [String Transformation](#string-transformation)
+- [Gallery Deployment](#gallery-deployment)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
 
 ## Project Structure
 
@@ -38,17 +51,20 @@ CoAchallenge/
 
 ## How to Run the Gallery Locally
 
-1. **Clone the repository**:
+1. **Requirements**:
+    - A web browser
+
+2. **Clone the repository**:
     ```bash
-    git clone <https://github.com/innocentemutabazi/CoAchallenge.git>
+    git clone https://github.com/innocentemutabazi/CoAchallenge.git
     ```
 
-2. **Navigate to the src folder**:
+3. **Navigate to the project directory**:
     ```bash
     cd CoAchallenge/Image\ Gallery
     ```
 
-3. **Open the HTML file**:
+4. **Open the HTML file**:
     - **Using File Explorer**: Navigate to the `CoAchallenge/Image Gallery` directory and double-click on `index.html` to open it in your default web browser.
     - **Using Right-click**: Right-click on `index.html` and select "Open with" to choose a specific web browser.
     - **Using Browser**: Open your web browser and drag the `index.html` file into the browser window.
@@ -62,20 +78,103 @@ CoAchallenge/
             start index.html
             ```
 
-4. **Ensure Proper Loading**:
+5. **Ensure Proper Loading**:
     - **Note**: Wait for the webpage to finish loading to ensure the fonts and styles are displayed correctly.
 
 ## Gallery Deployment
 
 The gallery is deployed and can be accessed at the following URL: [Deployed Gallery](https://jolly-mandazi-a9fb43.netlify.app/)
 
+## Gallery Screenshots
+
+| View              | Screenshot                              | Screenshot with Hover Effect                      |
+|-------------------|-----------------------------------------|---------------------------------------------------|
+| Mobile            | ![Mobile View](path/to/mobile-screenshot.png) | ![Mobile View with Hover Effect](path/to/mobile-hover-screenshot.png) |
+| Tablet            | ![Tablet View](path/to/tablet-screenshot.png) | ![Tablet View with Hover Effect](path/to/tablet-hover-screenshot.png) |
+| Laptop            | ![Laptop View](path/to/laptop-screenshot.png) | ![Laptop View with Hover Effect](path/to/laptop-hover-screenshot.png) |
+
+## How to Run the Coding Challenges
+
+1. **Requirements**:
+    - Node.js v22
+
+2. **Array Manipulation**:
+    - **Problem Statement**: Given an array of integers and a target sum, determine if there exists a contiguous subarray within the array that sums up to the target. Return true if such a subarray exists, otherwise return false.
+
+    - **Approach**:
+        - Start with two pointers: `left` and `right` at the beginning of the array.
+        - Keep a running sum by adding elements as we move the `right` pointer.
+        - Adjust the sum by moving the `left` pointer if the sum is too big.
+        - Check if the current sum matches the target.
+        - Return true if a matching sum is found, otherwise return false.
+
+    - **Solution**:
+        ```javascript
+        const hasSubarrayWithTargetSum = (arr, target) => {
+            let left = 0;
+            let currentSum = 0;
+            for (let right = 0; right < arr.length; right++) {
+                currentSum += arr[right];
+                while (currentSum > target && left <= right) {
+                    currentSum -= arr[left];
+                    left++;
+                }
+                if (currentSum === target) return true;
+            }
+            return false;
+        };
+
+        console.log(hasSubarrayWithTargetSum([1, 2, 3, 4, 5, 6, 34], 0));
+        ```
+
+    - **How to Run**:
+        ```bash
+        node CoAchallenge/Challenges/arrayMap.js
+        ```
+
+3. **String Transformation**:
+    - **Problem Statement**: Given a string, transform it based on the following rules:
+        - If the length of the string is divisible by 3, reverse the entire string.
+        - If the length of the string is divisible by 5, replace each character with its ASCII code.
+        - If the length of the string is divisible by both 3 and 5 (i.e., divisible by 15), perform both operations in the order specified above.
+
+    - **Approach**:
+        - Check if the string length is divisible by 15. If true, reverse the string and replace each character with its ASCII code.
+        - If not, check if the string length is divisible by 3. If true, reverse the string.
+        - If not, check if the string length is divisible by 5. If true, replace each character with its ASCII code.
+        - If none of these conditions are met, return the original string.
+
+    - **Solution**:
+        ```javascript
+        const stringTransform = inputString => {
+            let characters = [...(inputString.replaceAll(' ', ''))];
+            if (inputString.length % 15 === 0) { 
+              return characters.reverse().map(char => char.charCodeAt(0).toString()).join(' ');
+            } else if (inputString.length % 3 === 0) { 
+              return characters.reverse().join('');
+            } else if (inputString.length % 5 === 0) { 
+              return characters.map(char => char.charCodeAt(0).toString()).join(' ');
+            }
+            return inputString;
+        };
+        ```
+
+    - **How to Run**:
+        ```bash
+        node CoAchallenge/Challenges/stringTransform.js
+        ```
 
 
 ## Acknowledgements
 
 ### Fonts
-
 - [Google Fonts - Poppins](https://fonts.google.com/specimen/Poppins)
 - [Online WebFonts - DIN Condensed](https://www.onlinewebfonts.com/download/954a505bdd1fd46577f8b93badf61c8c)
 
-For any questions or feedback, please contact [innocentemutabazi@gmail.com].
+## Contact
+
+For any questions or feedback, please contact [innocentemutabazi@gmail.com](mailto:innocentemutabazi@gmail.com).
+
+---
+
+This README now includes simplified explanations of the approach for each coding challenge, specifies the requirement for a web browser for the gallery, and Node.js v22 for running the coding challenges.
