@@ -3,15 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html,
 body {
     height: 100%;
-}
-body {
     font-family: 'Poppins', sans-serif;
     color: white;
-    background: #000;
+    background-color: #000;
 }
+
 .gallery-1 {
     display: flex;
     flex-direction: row;
@@ -22,34 +22,32 @@ body {
     width: 90%;
     overflow: hidden;
 }
-.action-button {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.33;
-    color: #00DBFF;
-    text-align: left;
-    cursor: pointer;
-}
+
 .image-interaction {
     flex: 1;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    transition: .5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
+
 .image-interaction:hover img {
     filter: grayscale(100%) blur(3px) brightness(50%);
     transform: scale(1.2);
-
 }
+
+.image-interaction:hover .info {
+    transform: translateY(-8px);
+}
+
 img {
     position: absolute;
-    object-position: center;
     object-fit: cover;
     transition: transform 0.5s ease-in-out;
     width: 100%;
     height: 100%;
 }
+
 .overlay {
     display: flex;
     flex-direction: column;
@@ -58,34 +56,26 @@ img {
     padding: 40px;
     gap: 8px;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
 }
+
 .info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
     transition: transform 0.3s ease-out;
+}
 
-}
-.image-interaction:hover .info {
-    transform: translateY(-8px);
-}
 .subject-name {
     font-weight: 700;
     font-size: 30px;
     line-height: 1.15;
     text-transform: uppercase;
     font-family: 'DIN Condensed';
-
-
-
-
 }
+
 .location {
     font-weight: 400;
     font-size: 12px;
@@ -93,6 +83,16 @@ img {
     text-transform: capitalize;
     opacity: 0.7;
 }
+
+.action-button {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.33;
+    color: #00DBFF;
+    text-align: left;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 768px) {
     .overlay {
         display: none;
