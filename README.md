@@ -85,6 +85,13 @@ CoAchallenge/
 -   HTML: Structured with a container holding multiple article elements, each representing an image.
 -   CSS: Used Flexbox for layout, defined hover effects to transform images and display additional information.
 -   JavaScript: Implemented event delegation for performance whereby I added the event listener on the main container instead of adding it to all of the images, dynamically adding and removing an action button on hover.
+    -  Approach
+        -  Wait for Page Load: The code waits for the entire webpage to load before running. This makes sure all elements are ready to interact with.
+        -  Select Gallery: It picks the parent element that has the class .gallery-1.
+        -  Hover Event: When you move your mouse over an image in the gallery, the code checks if the image has an overlay with the class .image-interaction. If the overlay is there but doesn't have an action button, it adds one.
+        -  Action Button Addition:  The action button is a simple paragraph with the text "Know More →".
+        -  Leave Event: When you move your mouse away from the image, the code removes the action button from the overlay, keeping the interface clean.
+        -  Event Delegation: Instead of adding event listeners to every single image, the code adds just two listeners to the whole gallery. This way, it listens for mouse movements on the entire gallery and decides what to do based on which image you are hovering over. This makes the code run faster and use less memory.
 ## Gallery Deployment
 
 The gallery is deployed and can be accessed at the following URL: [Deployed Gallery](https://jolly-mandazi-a9fb43.netlify.app/)
@@ -107,13 +114,13 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
     - **Problem Statement**: Given an array of integers and a target sum, determine if there exists a contiguous subarray within the array that sums up to the target. Return true if such a subarray exists, otherwise, return false.
 
     - **Approach**:
-    To solve this challenge I used a technique called the sliding window technique where I had to:
-        - Start with two pointers: `left` and `right` at the beginning of the array.
-        - Keep a running sum by adding elements as we move the `right` pointer.
-        - Adjust the sum by moving the `left` pointer if the sum is too big.
-        - Check if the current sum matches the target.
-        - Return true if a matching sum is found, otherwise return false.
-        - *I also had to add a condition that checks if the elements of the array are all positive non-zero digits and the target is zero in this case it would return false which is the right answer but if you don't add it you will notice that the return value would be true and as we all know there are no positive numbers greater than zero that you can add to get zero*
+      -  Initialization: The function starts by initializing two variables: ```left``` to mark the start of the potential subarray and ```currentSum``` to keep track of the sum of numbers from the start of the array to the current position.
+      -  Checking Each Number: The function iterates through the array from the first number to the last, represented by right. This iteration represents moving a "window" of numbers being considered.
+      -  Handling Special Case: Before proceeding, it checks if the target sum is 0 and any number in the array is greater than 0. If so, it immediately returns false since it's impossible to reach a sum of 0 with any positive numbers.
+      -  Updating Current Sum: As it moves through the array, the function keeps updating ```currentSum``` by adding the current number to it.
+      -  Adjusting the Window: If ```currentSum``` becomes larger than the target sum, the function adjusts the start of the window by moving the left marker forward. This process involves subtracting the number at the left position from ```currentSum``` and incrementing left, effectively discarding numbers that contribute to an excess sum.
+      -  Finding a Match: Once ```currentSum``` equals the target sum, the function concludes that a valid subarray has been found and returns ```true```.
+      -  Conclusion: If the function scans through the entire array without finding a matching subarray, it returns false.
 
     - **Solution**:
         ```javascript
@@ -152,11 +159,17 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
         - If the length of the string is divisible by both 3 and 5 (i.e., divisible by 15), perform both operations in the order specified above.
 
     - **Approach**:
-        - Create an array of the characters in a string making sure to remove the empty spaces that might be present.
-        - Check if the string length is divisible by 15. If true, reverse the string and replace each character with its ASCII code.
-        - If not, check if the string length is divisible by 3. If true, reverse the string.
-        - If not, check if the string length is divisible by 5. If true, replace each character with its ASCII code.
-        - If none of these conditions are met, return the original string.
+      -  Input Parameter: The function takes one parameter, inputString, which is the string to be transformed.
+      -  Removing Spaces: Initially, all spaces within the inputString are removed using the replaceAll method. This ensures that the transformation logic focuses solely on the characters themselves, disregarding any whitespace.
+      -  Character Array Creation: The modified string (without spaces) is then converted into an array of characters using the spread operator (...) inside square brackets. This array, named characters, holds individual characters of the string.
+        <br> **Transformation Logic:** <br>
+      -  Divisible by 15: If the length of the original inputString (before spaces were removed) is divisible by 15 this is because a number that is divisible by both 3 and 5 is also divisible by 15, the function performs two transformations sequentially:
+          -  First, it reverses the order of the characters in the characters array using the .reverse() method.
+Then, it converts each character to its ASCII code representation using the .charCodeAt(0) method, maps this conversion to every element in the array using the map() method, and joins them into a single string with spaces between each ASCII code using .join(' ').
+      -  Divisible by 3: If the length is divisible by 3, the function simply reverses the order of the characters in the characters array using the reverse() method and joins them back into a string without any spaces using the join('') method.
+      -  Divisible by 5: If the length is divisible by 5, the function converts each character to its ASCII code representation and joins them into a single string with spaces between each ASCII code, similar to the first condition but without reversing the order.
+      -  No Divisibility Condition Met: If none of the divisibility conditions are met, the function returns the original inputString unchanged.
+      -  Return Value: Depending on the conditions evaluated, the function either returns the transformed string or the original string if no transformation was applied.g.
 
     - **Solution**:
         ```javascript
