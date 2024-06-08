@@ -101,7 +101,7 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
 1. **Requirements**:
     - Node.js v22
 
-2. **Array Manipulation**:
+2. ### **Array Manipulation**:
     - **Problem Statement**: Given an array of integers and a target sum, determine if there exists a contiguous subarray within the array that sums up to the target. Return true if such a subarray exists, otherwise return false.
 
     - **Approach**:
@@ -135,7 +135,7 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
         node CoAchallenge/Challenges/arrayMap.js
         ```
 
-3. **String Transformation**:
+3. ### **String Transformation**:
     - **Problem Statement**: Given a string, transform it based on the following rules:
         - If the length of the string is divisible by 3, reverse the entire string.
         - If the length of the string is divisible by 5, replace each character with its ASCII code.
