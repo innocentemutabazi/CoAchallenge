@@ -14,6 +14,7 @@ This project is an interactive photo gallery created as part of a coding challen
   - [Array Manipulation](#array-manipulation)
   - [String Transformation](#string-transformation)
 - [Gallery Deployment](#gallery-deployment)
+- [Gallery Screenshots](#gallery-screenshots)
 - [Acknowledgements](#acknowledgements)
 - [Contact](#contact)
 
