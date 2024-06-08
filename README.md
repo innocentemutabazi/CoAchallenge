@@ -205,3 +205,6 @@ Then, it converts each character to its ASCII code representation using the .cha
 ## Contact
 
 For any questions or feedback, please contact [innocentemutabazi@gmail.com](mailto:innocentemutabazi@gmail.com).
+
+## Author
+Innocente Umuhuza Mutabazi
