@@ -101,13 +101,13 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
 ## How to Run the Coding Challenges
 
 1. **Requirements**:
-    - Node.js v22
+    - Node.js v22 (You can download it from [Node.js official website](https://nodejs.org/en/download/package-manager/current) if you haven't already.)
 
 2. ### **Array Manipulation**:
     - **Problem Statement**: Given an array of integers and a target sum, determine if there exists a contiguous subarray within the array that sums up to the target. Return true if such a subarray exists, otherwise, return false.
 
     - **Approach**:
-    To solve this challenge I used a technique called the sliding window technique where by I had to:
+    To solve this challenge I used a technique called the sliding window technique where I had to:
         - Start with two pointers: `left` and `right` at the beginning of the array.
         - Keep a running sum by adding elements as we move the `right` pointer.
         - Adjust the sum by moving the `left` pointer if the sum is too big.
@@ -136,8 +136,13 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
         ```
 
     - **How to Run**:
+      -  Navigate to the directory where you cloned the project using the following command:
+      ```bash
+        cd CoAchallenge/Challenges
+      ```
+      -  Run the Array Manipulation script using Node.js by executing the following command:
         ```bash
-        node CoAchallenge/Challenges/arrayMap.js
+        node arrayMap.js
         ```
 
 3. ### **String Transformation**:
@@ -168,11 +173,15 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
         };
         ```
 
-    - **How to Run**:
-        ```bash
-        node CoAchallenge/Challenges/stringTransform.js
-        ```
-
+  - **How to Run**:
+      -  Navigate to the directory where you cloned the project using the following command:
+      ```bash
+        cd CoAchallenge/Challenges
+      ```
+      -  Run the String Transformation script using Node.js by executing the following command:
+       ```bash
+       node stringTransform.js
+      ```
 
 ## Acknowledgements
 
