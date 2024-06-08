@@ -81,7 +81,10 @@ CoAchallenge/
 
 5. **Ensure Proper Loading**:
     - **Note**: Wait for the webpage to finish loading to ensure the fonts and styles are displayed correctly.
-
+6.  **Approach for Building the Gallery**
+-   HTML: Structured with a container holding multiple article elements, each representing an image.
+-   CSS: Used Flexbox for layout, defined hover effects to transform images and display additional information.
+-   JavaScript: Implemented event delegation for performance where by I added the event listener on the main container instead of adding it to all of the images, dynamically adding and removing an action button on hover.
 ## Gallery Deployment
 
 The gallery is deployed and can be accessed at the following URL: [Deployed Gallery](https://jolly-mandazi-a9fb43.netlify.app/)
@@ -95,7 +98,6 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
 | Laptop            | ![Laptop View](https://github.com/innocentemutabazi/CoAchallenge/assets/159420918/71f2c46d-6fe7-4335-83bb-1e3c7de35ee8) | ![Laptop View with Hover Effect](https://github.com/innocentemutabazi/CoAchallenge/assets/159420918/ea9b44f3-940c-4bd1-9c7a-9e7cf9e7a911) |
 
 
-
 ## How to Run the Coding Challenges
 
 1. **Requirements**:
@@ -105,11 +107,13 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
     - **Problem Statement**: Given an array of integers and a target sum, determine if there exists a contiguous subarray within the array that sums up to the target. Return true if such a subarray exists, otherwise return false.
 
     - **Approach**:
+    To solve this challenge I used a techinique called the sliding window technique where by I had to:
         - Start with two pointers: `left` and `right` at the beginning of the array.
         - Keep a running sum by adding elements as we move the `right` pointer.
         - Adjust the sum by moving the `left` pointer if the sum is too big.
         - Check if the current sum matches the target.
         - Return true if a matching sum is found, otherwise return false.
+        - *I also had to add a condition that checks if the elements of the array are all positive non-zero digits and the target is zero in this case it would return false which is the right answer but if you dont add you will notice that the return value would be true and as we all know there ar no positive numbers greater than zero that you can add to get zero*
 
     - **Solution**:
         ```javascript
@@ -117,6 +121,7 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
             let left = 0;
             let currentSum = 0;
             for (let right = 0; right < arr.length; right++) {
+                if (arr[right]>0 && target === 0) return false
                 currentSum += arr[right];
                 while (currentSum > target && left <= right) {
                     currentSum -= arr[left];
@@ -142,6 +147,7 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
         - If the length of the string is divisible by both 3 and 5 (i.e., divisible by 15), perform both operations in the order specified above.
 
     - **Approach**:
+        - Create an array of the characters in a string making sure to remove the empty spaces that might be present.
         - Check if the string length is divisible by 15. If true, reverse the string and replace each character with its ASCII code.
         - If not, check if the string length is divisible by 3. If true, reverse the string.
         - If not, check if the string length is divisible by 5. If true, replace each character with its ASCII code.
