@@ -84,7 +84,7 @@ CoAchallenge/
 6.  **Approach for Building the Gallery**
 -   HTML: Structured with a container holding multiple article elements, each representing an image.
 -   CSS: Used Flexbox for layout, defined hover effects to transform images and display additional information.
--   JavaScript: Implemented event delegation for performance where by I added the event listener on the main container instead of adding it to all of the images, dynamically adding and removing an action button on hover.
+-   JavaScript: Implemented event delegation for performance whereby I added the event listener on the main container instead of adding it to all of the images, dynamically adding and removing an action button on hover.
 ## Gallery Deployment
 
 The gallery is deployed and can be accessed at the following URL: [Deployed Gallery](https://jolly-mandazi-a9fb43.netlify.app/)
@@ -104,16 +104,16 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
     - Node.js v22
 
 2. ### **Array Manipulation**:
-    - **Problem Statement**: Given an array of integers and a target sum, determine if there exists a contiguous subarray within the array that sums up to the target. Return true if such a subarray exists, otherwise return false.
+    - **Problem Statement**: Given an array of integers and a target sum, determine if there exists a contiguous subarray within the array that sums up to the target. Return true if such a subarray exists, otherwise, return false.
 
     - **Approach**:
-    To solve this challenge I used a techinique called the sliding window technique where by I had to:
+    To solve this challenge I used a technique called the sliding window technique where by I had to:
         - Start with two pointers: `left` and `right` at the beginning of the array.
         - Keep a running sum by adding elements as we move the `right` pointer.
         - Adjust the sum by moving the `left` pointer if the sum is too big.
         - Check if the current sum matches the target.
         - Return true if a matching sum is found, otherwise return false.
-        - *I also had to add a condition that checks if the elements of the array are all positive non-zero digits and the target is zero in this case it would return false which is the right answer but if you dont add you will notice that the return value would be true and as we all know there ar no positive numbers greater than zero that you can add to get zero*
+        - *I also had to add a condition that checks if the elements of the array are all positive non-zero digits and the target is zero in this case it would return false which is the right answer but if you don't add it you will notice that the return value would be true and as we all know there are no positive numbers greater than zero that you can add to get zero*
 
     - **Solution**:
         ```javascript
