@@ -89,9 +89,11 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
 
 | View              | Screenshot                              | Screenshot with Hover Effect                      |
 |-------------------|-----------------------------------------|---------------------------------------------------|
-| Mobile            | ![Mobile View](path/to/mobile-screenshot.png) | ![Mobile View with Hover Effect](path/to/mobile-hover-screenshot.png) |
-| Tablet            | ![Tablet View](path/to/tablet-screenshot.png) | ![Tablet View with Hover Effect](path/to/tablet-hover-screenshot.png) |
-| Laptop            | ![Laptop View](path/to/laptop-screenshot.png) | ![Laptop View with Hover Effect](path/to/laptop-hover-screenshot.png) |
+| Mobile            | ![Mobile View](https://github.com/innocentemutabazi/CoAchallenge/assets/159420918/d23f364c-a272-4b34-b361-372e121e18cc) | ![Mobile View with Hover Effect](https://github.com/innocentemutabazi/CoAchallenge/assets/159420918/0209cae2-d67c-49fa-b6e5-f61ef087bab6) |
+| Tablet            | ![Tablet View](https://github.com/innocentemutabazi/CoAchallenge/assets/159420918/fb10f3e0-a1ce-4ec5-8d94-f83684dd179e) | ![Tablet View with Hover Effect](https://github.com/innocentemutabazi/CoAchallenge/assets/159420918/048211ea-21e6-4c09-9d52-32cb039bac79)|
+| Laptop            | ![Laptop View](https://github.com/innocentemutabazi/CoAchallenge/assets/159420918/71f2c46d-6fe7-4335-83bb-1e3c7de35ee8) | ![Laptop View with Hover Effect](https://github.com/innocentemutabazi/CoAchallenge/assets/159420918/ea9b44f3-940c-4bd1-9c7a-9e7cf9e7a911) |
+
+
 
 ## How to Run the Coding Challenges
 
@@ -174,7 +176,3 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
 ## Contact
 
 For any questions or feedback, please contact [innocentemutabazi@gmail.com](mailto:innocentemutabazi@gmail.com).
-
----
-
-This README now includes simplified explanations of the approach for each coding challenge, specifies the requirement for a web browser for the gallery, and Node.js v22 for running the coding challenges.
