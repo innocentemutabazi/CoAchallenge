@@ -159,30 +159,30 @@ The gallery is deployed and can be accessed at the following URL: [Deployed Gall
         - If the length of the string is divisible by both 3 and 5 (i.e., divisible by 15), perform both operations in the order specified above.
 
     - **Approach**:
-      -  Input Parameter: The function takes one parameter, inputString, which is the string to be transformed.
-      -  Removing Spaces: Initially, all spaces within the inputString are removed using the replaceAll method. This ensures that the transformation logic focuses solely on the characters themselves, disregarding any whitespace.
+      -  Input Parameter: The function takes one parameter, str, which is the string to be transformed.
+      -  Removing Spaces: Initially, all spaces within the str are removed using the replaceAll method. This ensures that the transformation logic focuses solely on the characters themselves, disregarding any whitespace.
       -  Character Array Creation: The modified string (without spaces) is then converted into an array of characters using the spread operator (...) inside square brackets. This array, named characters, holds individual characters of the string.
         <br> **Transformation Logic:** <br>
-      -  Divisible by 15: If the length of the original inputString (before spaces were removed) is divisible by 15 this is because a number that is divisible by both 3 and 5 is also divisible by 15, the function performs two transformations sequentially:
+      -  Divisible by 15: If the length of the original str (before spaces were removed) is divisible by 15 this is because a number that is divisible by both 3 and 5 is also divisible by 15, the function performs two transformations sequentially:
           -  First, it reverses the order of the characters in the characters array using the .reverse() method.
 Then, it converts each character to its ASCII code representation using the .charCodeAt(0) method, maps this conversion to every element in the array using the map() method, and joins them into a single string with spaces between each ASCII code using .join(' ').
       -  Divisible by 3: If the length is divisible by 3, the function simply reverses the order of the characters in the characters array using the reverse() method and joins them back into a string without any spaces using the join('') method.
       -  Divisible by 5: If the length is divisible by 5, the function converts each character to its ASCII code representation and joins them into a single string with spaces between each ASCII code, similar to the first condition but without reversing the order.
       -  No Divisibility Condition Met: If none of the divisibility conditions are met, the function returns the original inputString unchanged.
-      -  Return Value: Depending on the conditions evaluated, the function either returns the transformed string or the original string if no transformation was applied.g.
+      -  Return Value: Depending on the conditions evaluated, the function either returns the transformed string or the original string if no transformation was applied.
 
     - **Solution**:
         ```javascript
-        const stringTransform = inputString => {
-            let characters = [...(inputString.replaceAll(' ', ''))];
-            if (inputString.length % 15 === 0) { 
+        const stringTransform = str => {
+            let characters = [...(str.replaceAll(' ', ''))];
+            if (str.length % 15 === 0) { 
               return characters.reverse().map(char => char.charCodeAt(0).toString()).join(' ');
-            } else if (inputString.length % 3 === 0) { 
+            } else if (str.length % 3 === 0) { 
               return characters.reverse().join('');
-            } else if (inputString.length % 5 === 0) { 
+            } else if (str.length % 5 === 0) { 
               return characters.map(char => char.charCodeAt(0).toString()).join(' ');
             }
-            return inputString;
+            return str;
         };
         ```
 
